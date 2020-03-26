@@ -69,6 +69,7 @@ set(files
     xiaomi/03_redmi.yml
     xiaomi/04_redmi_note.yml
     xiaomi/05_other.yml
+    xiaomi/06_redmi.yml
     yu.yml
     zoji.yml
     zte.yml
@@ -87,7 +88,9 @@ add_custom_command(
     WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
     COMMENT "Generating device defition JSON file"
     VERBATIM
-)
+
+
+
 
 install(
     FILES "${target_file}"
