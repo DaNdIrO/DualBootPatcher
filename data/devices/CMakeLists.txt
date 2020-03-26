@@ -1,3 +1,4 @@
+
 if(NOT MBP_TOP_LEVEL_BUILD)
     return()
 endif()
@@ -68,7 +69,8 @@ set(files
     xiaomi/02_mi_max.yml
     xiaomi/03_redmi.yml
     xiaomi/04_redmi_note.yml
-    xiaomi/05_other.yml
+    Xiaomi/05_other.yml
+    Xiaomi/06_redmi.yml
     yu.yml
     zoji.yml
     zte.yml
