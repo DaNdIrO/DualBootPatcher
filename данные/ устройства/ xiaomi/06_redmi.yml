@@ -1,0 +1,53 @@
+---
+- name: Redmi Redmi Note 8 Pro
+  id: begonia
+  codenames:
+      - 8
+      - Note
+      - Pro
+      - Redmi
+      - begonia
+  architecture: arm64-v8a
+  block_devs:
+    base_dirs:
+      - /dev/block/platform/bootdevice/by-name
+      - /dev/block/by-name
+    system:
+      - /dev/block/by-name/system
+      - /dev/block/platform/bootdevice/by-name/system
+      - /dev/block/sdc40
+    cache:
+      - /dev/block/by-name/cache
+      - /dev/block/platform/bootdevice/by-name/cache
+      - /dev/block/sdc41
+    data:
+      - /dev/block/by-name/userdata
+      - /dev/block/platform/bootdevice/by-name/userdata
+      - /dev/block/sdc46
+    boot:
+      - /dev/block/by-name/boot
+      - /dev/block/platform/bootdevice/by-name/boot
+      - /dev/block/platform/bootdevice/by-name/boot_para
+      - /dev/block/sdc20
+      - /dev/block/sdc34
+    recovery:
+      - /dev/block/by-name/recovery
+      - /dev/block/platform/bootdevice/by-name/recovery
+      - /dev/block/sdc1
+    extra:
+      - 
+      - /dev/block/mmcblk1
+      - /dev/block/mmcblk1p1
+ 
+  boot_ui:
+    supported: true
+    flags:
+      - TW_GRAPHICS_FORCE_USE_LINELENGTH
+    brightness_path: /sys/class/leds/lcd-backlight/brightness
+    max_brightness: 255
+    default_brightness: 168
+    cpu_temp_path: /sys/devices/virtual/thermal/thermal_zone0/temp
+    battery_path: /sys/class/power_supply/battery/capacity
+    graphics_backends:
+      - fbdev
+    theme: portrait_hdpi
